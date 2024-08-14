@@ -1,0 +1,681 @@
+body {
+    margin: 0;
+  }
+  .image-section {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+  }
+  /* "input[type='file']" this will modify 'no file choosen' also */
+  input[type="file"] {
+    font-size: 20px;
+    border: 2px solid lightgrey;
+  }
+  input[type="file"]:hover {
+    border: 2px solid blue;
+    cursor: pointer;
+  }
+  
+  /* but "input::-webkit-file-upload-button" will modify only the "choose file" button */
+  input::-webkit-file-upload-button {
+    background-color: green;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+  }
+  input::-webkit-file-upload-button:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+  }
+  .main-section {
+    display: flex;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .main-section-2 {
+    display: flex;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .main-section-3 {
+    display: flex;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .main-left-section {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .main-left-section-2 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .main-left-section-3 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .main-right-section {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .main-right-section-2 {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main-right-section-3 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .input-degree-style {
+    height: 30px;
+    outline: none;
+    border: none;
+    border: 1px solid grey;
+    background-color: rgb(234, 232, 232);
+    width: 100%;
+    font-size: 18px;
+    color: blue;
+  }
+  .input-skill-style {
+    height: 30px;
+    outline: none;
+    border: none;
+    border: 1px solid grey;
+    background-color: rgb(234, 232, 232);
+    width: 100%;
+    font-size: 18px;
+    color: blue;
+  }
+  .input-project-style {
+    height: 30px;
+    outline: none;
+    border: none;
+    border: 1px solid grey;
+    background-color: rgb(234, 232, 232);
+    width: 100%;
+    font-size: 18px;
+    color: blue;
+  }
+  .input-personal-style {
+    height: 30px;
+    outline: none;
+    border: none;
+    border: 1px solid grey;
+    background-color: rgb(234, 232, 232);
+    width: 100%;
+    font-size: 18px;
+    color: blue;
+  }
+  .input-award-style {
+    height: 30px;
+    outline: none;
+    border: none;
+    border: 1px solid grey;
+    background-color: rgb(234, 232, 232);
+    width: 100%;
+    font-size: 18px;
+    color: blue;
+  }
+  .input-text-style:focus {
+    border: 2px solid blue;
+  }
+  .input-skill-style:focus {
+    border: 2px solid blue;
+  }
+  .input-degree-style:focus {
+    border: 2px solid blue;
+  }
+  .input-project-style:focus {
+    border: 2px solid blue;
+  }
+  .input-personal-style:focus {
+    border: 2px solid blue;
+  }
+  .input-award-style:focus {
+    border: 2px solid blue;
+  }
+  #objective {
+    font-size: 16px;
+    color: blue;
+    height: 40px;
+    width: 100%;
+    border: 1px solid grey;
+    margin: 5px 0px;
+  }
+  #objective:focus {
+    border: 2px solid blue;
+  }
+  input:focus {
+    outline: none;
+  }
+  #btn-add-degree {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    float: right;
+    border: none;
+    font-size: 18px;
+  }
+  #btn-remove-degree {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+  }
+  #btn-add-skill {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    float: right;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+  }
+  #btn-remove-skill {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+  }
+  #btn-add-project {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    float: right;
+    border: none;
+    font-size: 18px;
+  }
+  #btn-remove-project {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+  }
+  #btn-add-award {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    float: right;
+    border: none;
+    font-size: 18px;
+  }
+  #btn-remove-award {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+  }
+  #btn-next {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 18px;
+    float: right;
+    margin: 10px 0px;
+    width: 30%;
+  }
+  #btn-next:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #btn-add-degree:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #btn-remove-degree:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #btn-add-skill:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #btn-remove-skill:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #btn-add-project:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #btn-remove-project:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #btn-add-award:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #btn-remove-award:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+  }
+  #gender {
+    font-size: 17px;
+    width: 100%;
+    border: none;
+    border: 1px solid grey;
+    background-color: rgb(234, 232, 232);
+    height: 35px;
+  }
+  .skill-header {
+    width: 100%;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+  }
+  .project-header {
+    width: 100%;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+  }
+  .degree-header {
+    width: 100%;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+  }
+  .award-header {
+    width: 100%;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+  }
+  .personal-info-header {
+    width: 100%;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+  }
+  .your-picture-div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    padding: 10px;
+  }
+  .your-picture-header {
+    color: white;
+    background-color: blue;
+    padding: 5px;
+  }
+  
+  
+  .btn-create-resume {
+    padding: 10px 40px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: black;
+    color: white;
+    font-size: larger;
+    border: none;
+  }
+  .btn-create-resume:hover {
+    background-color: chocolate;
+    color: black;
+    cursor: pointer;
+  }
+
+  /* navbar styles start */
+  
+  
+  .main-steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    background-color: rgb(125, 82, 30);
+  }
+  *::selection {
+  background-color: rgb(13, 17, 17);
+  color: white;
+}
+.outer-cont {
+  padding: 10px;
+  font-family: cursive;
+  margin-top: 120px;
+  display: none;
+}
+.main-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: auto;
+}
+.left-cont {
+  width: 40%;
+  padding: 10px;
+  background-color: rgb(51, 83, 83);
+  color: white;
+}
+.right-cont {
+  width: 62%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.profile-area {
+  text-align: center;
+  padding: 10px;
+}
+.profile {
+  width: 150px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+.btn-download {
+  background-color: rgb(13, 17, 17);
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  margin-top: 10px;
+  text-align: center;
+  transition: all 0.5s;
+  width: 300px;
+  display: none;
+}
+
+
+.btn-download:hover {
+  background-color: rgb(51, 83, 83);
+  cursor: pointer;
+}
+.btn-back:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+.btns-div {
+  display: flex;
+  margin: auto;
+  max-width: 900px;
+}
+
+li {
+  list-style: none;
+  padding: 5px;
+  font-size: large;
+}
+.education {
+  padding: 5px;
+}
+.heading {
+  background-color: rgb(13, 17, 17);
+  color: white;
+  padding: 7px;
+  font-family: monospace;
+}
+.degree-heading {
+  background-color: lightgray;
+  padding: 7px;
+  font-family: monospace;
+  width: fit-content;
+}
+.project-heading {
+  background-color: lightgray;
+  padding: 7px;
+  font-family: monospace;
+  width: fit-content;
+}
+.email {
+  background-color: rgb(242, 238, 238);
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.phone {
+  background-color: rgb(242, 238, 238);
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.name {
+  background-color: rgb(242, 238, 238);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.name-area {
+  background-color: rgb(193, 198, 198);
+  padding: 10px;
+}
+#theme-cont {
+  display: flex;
+  margin: auto;
+  width: 900px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+#theme-def {
+  background-color: #335353;
+  color: #0d1111;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#theme1 {
+  background-color: #1d7a1d;
+  color: #0f510f;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#theme2 {
+  background-color: #b35900;
+  color: #663300;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#theme3 {
+  background-color: #8533ff;
+  color: #4f13a8;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#theme4 {
+  background-color: #0eb5da;
+  color: #083144;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#theme5 {
+  background-color: #2d27dd;
+  color: #0b14c4;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* modal css */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease;
+  background-color: #f8d7da;
+  color: #dc3545;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  height: 190px;
+  width: 350px;
+  border: 1px solid red;
+}
+.modal-button {
+  margin-top: 80px;
+  cursor: pointer;
+  background-color: rgb(50, 50, 50);
+  font-weight: 600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+}
+.modal-button:hover{
+  box-shadow: 5px 5px 5px black;
+}
+
+/* side menu and company logo */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden */
+  background-color: black;
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 23;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn:hover{
+  color:red;
+  border:1px solid red;
+}
+.open-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.sidebar ul li a:hover{
+  
+  font-weight:bold;
+  border-bottom:4px solid white;
+}
+
+#main-cont{
+  transition: margin-left 0.3s;
+}
+
+/* hamburger menu css starts here */
+.hamburger-menu {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  z-index: 13;
+}
+
+.bar {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first and third bars to create the hamburger effect */
+.hamburger-menu.open .bar:first-child {
+  transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .bar:last-child {
+  transform: rotate(45deg) translate(-4px, -4px);
+}
+
+.menu-logo-cont {
+  position: fixed; /* Fix the container at the top */
+  top: 0; /* Position at the top of the viewport */
+  width: 100%; /* Occupy full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* Optional: Add background color */
+  
+}

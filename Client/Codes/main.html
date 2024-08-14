@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generate fancy resumes</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <header id="menu">
+    <nav>
+      <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <ul>
+          <li><a href="homePage.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="menu-logo-cont">
+        <div class="hamburger-menu" id="hamburgerMenu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div>
+          <h3 style="font-size: x-large;">Apna Resume</h3>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="areaToHide">
+    <div style="padding: 100px;background-color: white;">
+      <div>
+        <form id="objective__form">
+          <input type="text" id="objective" name="objective" placeholder="type your objective here" class="objective"
+            required />
+        </form>
+      </div>
+      <br />
+
+      <div class="your-picture-div">
+        <h3 class="your-picture-header">Profile picture</h3>
+        <div class="image-section">
+          <div style="display: flex; flex-direction: column; row-gap: 15px">
+            <input type="file" accept="image/jpeg, image/png" id="profile-uploader" name="profile-uploader"
+              onchange="displayProfilePicture()" />
+          </div>
+
+          <div>
+            <img src="" alt="profile-picture" width="150px" height="160px"
+              style="border: 1px solid red;display: none;border-radius: 50%;" id="profile-preview" />
+          </div>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <div style="border: 1px solid lightgray; padding: 10px; width: 50%">
+          <h3 class="personal-info-header">Personal information</h3>
+          <div>
+            <form id="personal__form" class="main-left-section">
+              <label for="name">Enter your name: </label>
+              <input type="text" placeholder="Type your name here" id="name" name="name" class="input-personal-style"
+                required />
+
+              <label for="email">Enter your email: </label>
+              <input type="email" placeholder="Type your email here" id="email" name="email"
+                class="input-personal-style" required />
+
+              <label for="contact">Enter your contact number: </label>
+              <input type="text" placeholder="Type your contact number here" id="phone" name="phone"
+                class="input-personal-style" required />
+
+              <label for="address">Enter your address: </label>
+              <input type="text" placeholder="Type your address here(seperate with comma)" id="address" name="address"
+                class="input-personal-style" required />
+
+              <label for="birth-date">Enter your date of birth: </label>
+              <input type="text" placeholder="Type your birth date" name="dob" id="dob" class="input-personal-style"
+                required />
+
+              <label for="marital-status">Enter your marital status: </label>
+              <input type="text" placeholder="Type your marital status" id="marital" name="marital"
+                class="input-personal-style" required />
+
+              <label for="gender">Select your gender: </label>
+              <select name="gender" id="gender">
+                <option value="male" style="font-size: 17px" id="male" name="male">
+                  Male
+                </option>
+                <option value="female" style="font-size: 17px" id="female" name="female">
+                  Female
+                </option>
+              </select>
+
+              <label for="nationality">Enter your nationality: </label>
+              <input type="text" placeholder="Type your nationality" id="nationality" name="nationality"
+                class="input-personal-style" required />
+
+              <label for="language">Enter known languages: </label>
+              <input type="text" id="language" name="language"
+                placeholder="Type the language you speak good(seperate with comma)" class="input-personal-style"
+                required />
+
+            </form>
+          </div>
+        </div>
+
+        <div style="border: 1px solid lightgray; padding: 10px; width: 50%">
+          <div id="main-right-section">
+            <form id="degree__form" class="main-right-section">
+              <h4 class="degree-header" id="degree-header1">Degree 1</h4>
+              <label for="input-degree-name1" id="label-degree-name1">Enter Your Degree Name:
+              </label>
+              <input type="text" id="input-degree-name1" placeholder="Type your degree name here"
+                class="input-degree-style" name="inputDegreeName1" required />
+
+              <label for="input-degree-college1" id="label-degree-college1">Enter Your College
+                Name/University
+                Name:
+              </label>
+              <input type="text" id="input-degree-college1"
+                placeholder="Type your college name and /university name here" class="input-degree-style"
+                name="inputDegreeCollege1" required />
+
+              <label for="input-degree-marks1" id="label-degree-marks1">Enter Your Marks(in %):
+              </label>
+              <input type="text" id="input-degree-marks1" placeholder="Type your marks here with percentage symbol"
+                class="input-degree-style" name="inputDegreeMarks1" required />
+
+              <label for="input-degree-year1" id="label-degree-year1">Enter Your Degree Year:
+              </label>
+              <input type="text" id="input-degree-year1" placeholder="Type your degree year here(ex: 2018-2021)"
+                class="input-degree-style" name="inputDegreeYear1" required />
+            </form>
+          </div>
+          <br />
+          <button type="button" id="btn-add-degree" onclick="addNewDegreeSection()">
+            Add Degree
+          </button>
+          <button type="button" id="btn-remove-degree" onclick="removeLastDegreeSection()">
+            Remove Degree
+          </button>
+        </div>
+      </div>
+
+      <div class="main-section-2">
+        <div style="border: 1px solid lightgray; padding: 10px; width: 40%">
+          <div id="main-left-section2">
+            <form id="skill__form" class="main-left-section-2">
+              <h4 class="skill-header" id="skill-header1">Skill 1</h4>
+              <label for="input-skill-name1" id="label-skill-name1">Enter your skill:
+              </label>
+              <input type="text" value="" style="width: 100%"
+                placeholder="type your skill(Any programming language you know)" id="input-skill-name1"
+                class="input-skill-style" name="inputSkillName1" required />
+            </form>
+          </div>
+          <br />
+          <button type="button" id="btn-add-skill" onclick="addNewSkillSection()">
+            Add Skill
+          </button>
+          <button type="button" id="btn-remove-skill" onclick="removeLastSkillSection()">
+            Remove Skill
+          </button>
+        </div>
+        <div style="border: 1px solid lightgray; padding: 10px; width: 60%">
+          <div>
+            <form id="project__form" class="main-right-section-2">
+              <h4 class="skill-header" id="project-header1">Project 1</h4>
+
+              <label for="input-project-name1" id="label-project-name1">Enter your project name:</label>
+              <input type="text" placeholder="type your project name" class="input-project-style"
+                id="input-project-name1" name="inputProjectName1" required />
+
+              <label for="input-project-technology1" id="label-project-technology1">Enter technologies
+                used in
+                your
+                project:</label>
+              <input type="text" name="inputProjectTechnology1"
+                placeholder="type technologies used in your project(ex: Java, HTML)" class="input-project-style"
+                id="input-project-technology1" required />
+
+              <label for="input-project-description1" id="label-project-description1">Enter description of
+                your
+                project:</label>
+              <input type="text" placeholder="type description of your project in brief" class="input-project-style"
+                id="input-project-description1" name="inputProjectDescription1" required />
+            </form>
+          </div>
+          <br />
+          <button type="button" id="btn-add-project" onclick="addNewProjectSection()">
+            Add Project
+          </button>
+          <button type="button" id="btn-remove-project" onclick="removeLastProjectSection()">
+            Remove Project
+          </button>
+        </div>
+      </div>
+
+
+      <div class="main-section-3">
+        <div style="border: 1px solid lightgray; padding: 10px; width: 50%">
+          <div>
+            <form id="award__form" class="main-left-section-3">
+              <h4 class="award-header" id="award-header1">Award 1</h4>
+              <label id="label-award-name1" for="input-award-name1">Enter your award:</label>
+              <input class="input-award-style" id="input-award-name1" type="text"
+                placeholder="type your winnings, certificates" name="inputAwardName1" required />
+            </form>
+          </div>
+          <br>
+          <button id="btn-add-award" onclick="addNewAwardSection()">Add Award</button>
+          <button id="btn-remove-award" onclick="removeLastAwardSection()">Remove Award</button>
+        </div>
+      </div>
+
+      <button id="btn-next">Generate</button>
+    </div>
+    <br /><br />
+  </div>
+
+  <!-- modal code starts here-->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <h2 id="modalMsg">Resume is getting ready...</h2>
+      <button id="okButton" class="modal-button">OK</button>
+    </div>
+  </div>
+  <!-- modal code ends here -->
+
+  <div class="outer-cont" id="outer-cont">
+    <h1 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="theme-label">SELECT
+      A THEME</h1>
+    <div id="theme-cont">
+      <div id="theme-def" onclick="selectDefault()"></div>
+      <div id="theme1" onclick="selectTheme1()"></div>
+      <div id="theme2" onclick="selectTheme2()"></div>
+      <div id="theme3" onclick="selectTheme3()"></div>
+      <div id="theme4" onclick="selectTheme4()"></div>
+      <div id="theme5" onclick="selectTheme5()"></div>
+    </div>
+
+    <div class="main-cont" id="areaToPrint">
+      <div class="left-cont">
+        <div class="profile-area">
+          <img src="dress.jpg" alt="profile picture" class="profile" id="profile-preview2" />
+        </div>
+
+        <div class="left-info">
+          <div class="Details-div">
+            <h3 class="heading">Details</h3>
+            <div>
+              <ul>
+                <li id="gender2">your gender</li>
+                <li id="dob2">your birth date</li>
+                <li id="address2">your address</li>
+                <li id="marital2">your marital status</li>
+                <li id="nationality2">your nationality</li>
+                <li id="language2">language you speak</li>
+              </ul>
+            </div>
+          </div>
+          <div id="skills">
+            <h3 class="heading">Skills</h3>
+            <ul id="skillList">
+              <li id="skill1">Web development</li>
+            </ul>
+          </div>
+          <div id="award">
+            <h3 class="heading">
+              Award & Achievement
+            </h3>
+            <ul id="award-list">
+              <li id="award1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eius ad iste mollitia aliquam est quia!
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right-cont">
+        <div class="name-area">
+          <h1 class="name" id="name2">Your name goes here</h1>
+          <div style="display: flex;flex-direction: row;justify-content: space-between;flex-wrap: nowrap;margin: 0;">
+            <h4 class="email" id="email2">your@gmail.com</h4>
+            <h4 class="phone" id="phone2">8888888888</h4>
+          </div>
+          <h3 id="objective2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, harum.
+          </h3>
+        </div>
+        <div id="education">
+          <h3 class="heading">Education</h3>
+          <ul id="degree-list1">
+            <h4 class="degree-heading" id="degree-heading1">Degree 1</h4>
+            <li id="degree-name1">Degree name 1</li>
+            <li id="degree-year1">Degree year 1</li>
+            <li id="degree-college1">College name 1/University 1</li>
+            <li id="degree-marks1">marks in percentage</li>
+          </ul>
+        </div>
+
+        <div id="projects">
+          <h3 class="heading">Projects</h3>
+          <ul id="project-list1">
+            <h4 class="project-heading" id="project-heading1">Project 1</h4>
+            <li id="project-name1">project name 1</li>
+            <li id="project-technology1">technologies used in project</li>
+            <li id="project-description1">description of project</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btns-div">
+    <button class="btn-download" id="btn-download">Download Resume</button>
+  </div>
+</body>
+
+</html>
